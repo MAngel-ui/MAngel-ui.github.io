@@ -1,4 +1,5 @@
-*{
+/* ESTILOS GENERALES */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f8f9fa;
 }
 
 .container {
@@ -16,7 +18,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* HEADER */
 .header-principal {
     background: #2c3e50;
     color: white;
@@ -24,6 +26,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1000;
 }
 
 .header-principal .container {
@@ -32,37 +35,47 @@ body {
     align-items: center;
 }
 
+.logo h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
 .menu-principal ul {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.nav-link {
+.menu-principal a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.nav-link:hover {
+.menu-principal a:hover {
     color: #3498db;
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 .main-content {
     margin-top: 80px;
 }
 
+/* HERO SECTION */
 .hero {
-    background: #34495e;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 4rem 0;
-    text-align: center;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 3rem;
 }
 
@@ -71,19 +84,59 @@ body {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.3);
+}
+
+.info-principal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.nombre-destacado {
+    color: #f39c12;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.botones-accion {
+    display: flex;
+    gap: 1rem;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #e74c3c;
-    color: white;
+    padding: 12px 30px;
     text-decoration: none;
     border-radius: 5px;
-    margin: 10px 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s;
 }
 
-/* Footer */
+.btn-primario {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-primario:hover {
+    background: #c0392b;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secundario:hover {
+    background: white;
+    color: #333;
+}
+
+/* FOOTER */
 .footer-principal {
     background: #2c3e50;
     color: white;
